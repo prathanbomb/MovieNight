@@ -8,7 +8,7 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.yossisegev.movienight"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -38,7 +38,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$androidSupportLibVersion"
     implementation "com.android.support:design:$androidSupportLibVersion"
     implementation "com.android.support:cardview-v7:$androidSupportLibVersion"
-    implementation "com.android.support.constraint:constraint-layout:1.0.2"
+    implementation "com.android.support.constraint:constraint-layout:1.1.3"
 
     kapt rootProject.ext.daggerCompiler
     implementation rootProject.ext.dagger
@@ -48,18 +48,18 @@ dependencies {
     implementation rootProject.ext.retrofitRxJava2Adapter
     implementation rootProject.ext.room
 
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'co.lujun:androidtagview:1.1.4'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
 
     testImplementation rootProject.ext.junit
     testImplementation rootProject.ext.mockito
     androidTestImplementation rootProject.ext.androidTestRunner
     androidTestImplementation 'org.mockito:mockito-android:2.8.47'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(':data')
     implementation project(':domain')

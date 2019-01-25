@@ -13,8 +13,7 @@ import com.yossisegev.movienight.entities.Movie
  */
 
 class PopularMoviesViewModel(private val getPopularMovies: GetPopularMovies,
-                             private val movieEntityMovieMapper: Mapper<MovieEntity, Movie>) :
-        BaseViewModel() {
+                             private val movieEntityMovieMapper: Mapper<MovieEntity, Movie>) : BaseViewModel() {
 
     var viewState: MutableLiveData<PopularMoviesViewState> = MutableLiveData()
     var errorState: SingleLiveEvent<Throwable?> = SingleLiveEvent()
